@@ -9,45 +9,36 @@ body {
 /* ====== PHẦN HERO ====== */
 .wedding-hero {
   position: relative;
-  width: 100%;
   height: 100vh;
-  background: url("img/anh1.jpg") center/cover no-repeat;
+  background: url("img/anh1.jpg") no-repeat center center/cover; /* ảnh nền */
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wedding-hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.2);
+  justify-content: center; /* vẫn căn giữa ngang */
+  align-items: flex-end;   /* đẩy nội dung xuống dưới */
+  text-align: center;
+  padding-bottom: 80px;    /* chỉnh khoảng cách lên một chút từ mép dưới */
 }
 
 .overlay {
-  position: relative;
-  text-align: center;
-  color: white;
-  z-index: 1;
-  padding: 20px;
+  background: none; /* lớp mờ để chữ nổi bật */
+  padding: 30px;
+  border-radius: 12px;
 }
 
-.overlay h1 {
-  font-family: "Times New Roman", serif;
-  font-size: 40px;
-  margin: 0;
-  letter-spacing: 2px;
+/* Chữ script */
+.hero-script {
+  font-family: "Pinyon Script", "Allura", cursive;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.overlay span {
+/* Tên cô dâu chú rể */
+.hero-names {
+  font-family: "Cormorant Garamond";
   font-size: 28px;
-}
-
-.overlay p {
-  font-size: 18px;
-  margin-top: 10px;
-  font-style: italic;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 5px 0;
 }
 
 /* ====== PHẦN SAVE THE DATE ====== */
@@ -88,6 +79,61 @@ body {
   max-width: 90%;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+
+/* === PHẦN ẢNH CÔ DÂU CHÚ RỂ */
+.wedding-couple {
+  background: #fff; /* giống .wedding-time */
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.couple-box {
+  display: flex;
+  flex-direction: column; /* để role/name ở trên, ảnh ở dưới */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Role & Name */
+.groom, .bride {
+  margin-bottom: 20px;
+}
+
+.role {
+  font-family: "Times New Roman", serif;
+  font-size: 28px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.name {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Ảnh */
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.polaroid {
+  width: 60%;
+  max-width: 300px;
+  border: 10px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: rotate(-3deg);
+}
+
+.polaroid.right {
+  transform: rotate(3deg);
 }
 
 /* ===== CALENDAR ===== */
@@ -226,42 +272,145 @@ body {
   font-size: 14px;
   color: #777;
 }
-
-.rings {
-  font-size: 30px;
-  margin: 10px 0;
+/* Chia 2 cột */
+.location-box-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
 }
 
-.time-place h3 {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #2e3a59;
-}
-.address {
-  font-size: 14px;
-  margin: 5px 0 15px;
-  color: #444;
+.location-box {
+  text-align: center;
 }
 
-.btn-map {
-  display: inline-block;
-  background: #2e3a59;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 14px;
+.location-box h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #333;
+}
+
+.map-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.map-img:hover {
+  transform: scale(1.03);
 }
 
 .family-photo {
-  margin-top: 20px;
+  margin: 0;               /* bỏ margin */
+  padding: 0;              /* nếu cần */
+  width: 100vw;            /* full width viewport */
+  height: 100vh;           /* full height viewport */
+  overflow: hidden;        /* tránh scroll nếu ảnh lớn */
 }
+
 .family-photo img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: block;
+  width: 100%;             /* chiếm toàn bộ chiều ngang */
+  height: 100%;            /* chiếm toàn bộ chiều cao */
+  object-fit: cover;       /* giữ tỉ lệ và cắt ảnh nếu cần */
+  border-radius: 0;        /* bỏ bo góc nếu muốn full màn hình */
+  box-shadow: none;        /* bỏ shadow nếu muốn tràn sạch */
 }
+/* === ALBUM ẢNH CƯỚI
+.wedding-album header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.wedding-album header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #c27f79;
+  line-height: 1.2;
+} */
+
+/* --- ALBUM --- */
+.wedding-album {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+.wedding-album h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: "Georgia", serif;
+}
+
+/* Grid layout */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 cột */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Album items chung */
+.album-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.album-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.album-item:hover img {
+  transform: scale(1.05);
+}
+
+/* --- Set vị trí từng ảnh --- */
+/* 3 ảnh to */
+.item1 { grid-column: 1 / span 2; grid-row: 1 / span 2; height: 400px; }
+.item3 { grid-column: 3 / span 2; grid-row: 1 / span 2; height: 400px; }
+.item2 { grid-column: 5 / span 2; grid-row: 1 / span 2; height: 400px; }
+
+/* 2 ảnh nhỏ */
+.item4 { grid-column: 2 / span 2; grid-row: 3 / span 1; height: 300px; }
+.item5 { grid-column: 4 / span 2; grid-row: 3 / span 1; height: 300px; }
+
+/* Shadow nổi bật khi hover */
+.wedding-album .album-item:hover {
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+/* Caption trên ảnh khi hover */
+.wedding-album .album-item::after {
+  content: attr(alt); /* lấy alt làm caption */
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.wedding-album .album-item:hover::after {
+  opacity: 1;
+}
+
 
 /* ===== RSVP & COUNTDOWN ===== */
 .wedding-rsvp {

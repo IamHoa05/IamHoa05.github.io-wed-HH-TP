@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Invitation</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> -->
 </head>
 <script>
   // Đặt ngày cưới
@@ -32,19 +35,18 @@
   }, 1000);
 </script>
 <body>
-  <!-- Phần hero -->
-  <section class="wedding-hero">
-    <div class="overlay">
-      <h1>LONG <span>&</span> NGÂN</h1>
-      <p>Quyết định bên nhau trọn đời</p>
-    </div>
-  </section>
-
+<!-- Hero Section -->
+<section class="wedding-hero">
+  <div class="overlay">
+    <h2 class="hero-script">We get married!</h2>
+    <h1 class="hero-names">HOÀNG HẢI<span>&</span class="hero-names">THU PHƯƠNG</h1>
+  </div>
+</section>
   <!-- Phần Save the Date -->
   <section class="wedding-save">
     <h2>QUYẾT ĐỊNH BÊN NHAU<br>TRỌN ĐỜI</h2>
     <p class="sub-text">Save the date</p>
-    <p class="date">09.03.2025</p>
+    <p class="date">12.10.2025</p>
     <div class="photo-frame">
       <img src="img/anh2.jpg" alt="Couple photo">
     </div>
@@ -52,27 +54,41 @@
 
   <!-- PHẦN LỊCH + LỜI MỜI -->
   <section class="wedding-calendar">
-    <h2 class="month-title">March</h2>
-    <div class="calendar">
-      <div class="weekdays">
-        <span>MON</span><span>TUE</span><span>WED</span>
-        <span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
-      </div>
-      <div class="days">
-        <span></span><span></span><span></span><span></span><span></span><span>1</span><span>2</span>
-        <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
-        <span class="highlight">9</span>
-        <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
-        <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
-        <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
-        <span>31</span>
-      </div>
+  <h2 class="month-title">October 2025</h2>
+  <div class="calendar">
+    <div class="weekdays">
+      <span>MON</span><span>TUE</span><span>WED</span>
+      <span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
     </div>
-    <p class="invite-text">Thân mời tới dự lễ cưới thân mật của chúng tôi</p>
-    <h2 class="couple-name">HẢI LONG <span>&</span> SALIM</h2>
-  </section>
+    <div class="days">
+      <!-- Tuần 1: trống cho đến thứ Tư -->
+      <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+      <!-- Tuần 2 -->
+      <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="highlight">12</span>
+      <!-- Tuần 3 -->
+      <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+      <!-- Tuần 4 -->
+      <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+      <!-- Tuần 5 -->
+      <span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span></span><span></span>
+    </div>
+  </div>
+  <p class="invite-text">Thân mời tới dự lễ cưới thân mật của chúng tôi</p>
+  <h2 class="couple-name">HOÀNG HẢI <span>&</span> THU PHƯƠNG</h2>
+</section>
 
-   <!-- PHẦN GIỜ CƯỚI -->
+    <!--PHẦN ẢNH CÔ DÂU CHÚ RỂ-->
+    <section class="wedding-couple">
+  <div class="couple-box">
+    <div class="photos">
+      <img src="img/bride.JPG" alt="Groom" class="polaroid left">
+      <img src="img/groom.JPG" alt="Bride" class="polaroid right">
+    </div>
+  </div>
+
+</section>
+   <!-- PHẦN GIỜ CƯỚI
+    
   <section class="wedding-time">
     <div class="photos">
       <img src="img/bride.JPG" alt="Groom" class="polaroid left">
@@ -80,51 +96,68 @@
     </div>
     <div class="time-info">
       <p>LỄ THÀNH HÔN ĐƯỢC CHỨC</p>
-      <p>VÀO LÚC <strong>17 GIỜ 30 PHÚT</strong></p>
+      <p>VÀO LÚC <strong>13 GIỜ 00 PHÚT</strong></p>
       <p class="day">CHỦ NHẬT</p>
-      <h2 class="big-date">09</h2>
+      <h2 class="big-date">12</h2>
     </div>
-  </section>
+  </section> -->
 
-   <!-- PHẦN ĐỊA ĐIỂM & ẢNH -->
-  <section class="wedding-location">
+<!-- PHẦN ĐỊA ĐIỂM -->
+<section class="wedding-location">
+  <div class="location-wrapper">
     <div class="time-place">
-      <h2>LỄ THÀNH HÔN ĐƯỢC CHỨC<br>VÀO LÚC <span>17 GIỜ 30 PHÚT</span></h2>
+      <h2>LỄ THÀNH HÔN ĐƯỢC CHỨC<br>VÀO LÚC <span>13 GIỜ 30 PHÚT</span></h2>
       <p class="day">CHỦ NHẬT</p>
       <div class="date-block">
-        <span class="month">THÁNG 3</span>
-        <span class="big-date">09</span>
+        <span class="month">THÁNG 10</span>
+        <span class="big-date">12</span>
         <span class="year">NĂM 2025</span>
       </div>
-      <p class="note">(Tức ngày 10 tháng 02 năm Ất Tỵ)</p>
-      <div class="rings">💍</div>
-      <h3>TẠI DECEMBER HOTEL</h3>
-      <p class="address">Nguyễn Thiện Thuật, Lộc Thọ, Nha Trang</p>
-      <a href="https://maps.google.com" target="_blank" class="btn-map">📍 CHỈ ĐƯỜNG</a>
+      <p class="note">(Tức ngày 21 tháng 08 năm Ất Tỵ)</p>
+      </div>
     </div>
+      
+    <div class="location-box-2">
+    <!-- Nhà trai -->
+    <div class="location-box">
+      <h3>NHÀ TRAI</h3>
+      <a href="https://maps.google.com" target="_blank">
+        <img src="img/map-groom.jpg" alt="Map Nhà Trai" class="map-img">
+      </a>
+    </div>
+
+    <!-- Nhà gái -->
+    <div class="location-box">
+      <h3>NHÀ GÁI</h3>
+      <a href="https://maps.google.com" target="_blank">
+        <img src="img/map-bride.jpg" alt="Map Nhà Gái" class="map-img">
+      </a>
+    </div>
+    </div>
+    
+
+  <!-- Ảnh chung -->
+ 
     <div class="family-photo">
-      <img src="img/anh2.JPG" alt="Family Photo">
+      <img src="img/anh8.JPG" alt="Family Photo">
     </div>
-  </section>
+</section>
+
+
+<!-- ALBUM ẢNH CƯỚI --> 
+   <section class="wedding-album">
+  <h1>Album Ảnh Cưới</h1>
+  <div class="album-grid">
+    <div class="album-item item1"><img src="img/anh3.JPG" alt="Ảnh 1"></div>
+    <div class="album-item item2"><img src="img/anh4.JPG" alt="Ảnh 2"></div>
+    <div class="album-item item3"><img src="img/anh5.JPG" alt="Ảnh 3"></div>
+    <div class="album-item item4"><img src="img/anh6.JPG" alt="Ảnh 4"></div>
+    <div class="album-item item5"><img src="img/anh7.JPG" alt="Ảnh 5"></div>
+  </div>
+</section>
+
  <!-- PHẦN RSVP & COUNTDOWN -->
   <section class="wedding-rsvp">
-    <h2>GỬI LỜI NHẮN</h2>
-    <form class="rsvp-form">
-      <select>
-        <option disabled selected>Bạn tham dự cùng ai?</option>
-        <option>Một mình</option>
-        <option>Cùng gia đình</option>
-        <option>Cùng bạn bè</option>
-      </select>
-
-      <select>
-        <option disabled selected>Bạn là khách mời của ai?</option>
-        <option>Cô dâu</option>
-        <option>Chú rể</option>
-      </select>
-
-      <button type="submit">GỬI LỜI NHẮN</button>
-    </form>
 
     <div class="countdown">
       <h3>Countdown</h3>
@@ -140,10 +173,7 @@
       và chúng mình vô cùng trân quý khi được cùng bạn chia sẻ niềm hạnh phúc 
       trong ngày trọng đại này.</p>
       <h2>Thank you!</h2>
-    </div>
-    <div class="thanks-photo">
-      <img src="img/anh6.jpg" alt="Thank you">
-    </div>
+
   </section>
 
 </body>
