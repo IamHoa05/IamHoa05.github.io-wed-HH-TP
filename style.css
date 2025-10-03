@@ -481,3 +481,131 @@ body {
   max-width: 400px;
   border-radius: 12px;
 }
+
+/* ===== GENERAL RESET ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* giữ tỉ lệ, crop nếu cần */
+  border-radius: inherit; /* kế thừa border-radius từ container */
+  box-shadow: inherit;    /* kế thừa shadow nếu container có */
+}
+
+/* ===== PHẦN ẢNH CÔ DÂU – CHÚ RỂ / POLAROID ===== */
+.wedding-couple, .wedding-time {
+  background: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.couple-box {
+  display: flex;
+  flex-direction: column; /* tên/role trên, ảnh dưới */
+  align-items: center;
+  gap: 30px;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* desktop gap */
+  flex-wrap: wrap;
+}
+
+.polaroid {
+  width: 45%;      /* desktop size */
+  max-width: 350px;
+  border: 10px solid white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: rotate(-3deg);
+  transition: transform 0.3s;
+}
+
+.polaroid.right {
+  transform: rotate(3deg);
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* ===== FAMILY PHOTO ===== */
+.family-photo img {
+  width: 100%;
+  max-height: 100vh;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ===== MAP IMAGE ===== */
+.map-img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.map-img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== ALBUM IMAGES ===== */
+.album-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.album-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE TẤT CẢ ẢNH CHO MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* Polaroid co vừa màn hình */
+  .polaroid {
+    width: 80%;
+    max-width: 300px;
+    transform: rotate(0deg); /* bỏ nghiêng */
+  }
+  
+  .polaroid.right {
+    transform: rotate(0deg);
+  }
+
+  /* Album xếp 1 cột */
+  .album-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Map co vừa màn hình */
+  .map-img {
+    max-height: 180px;
+  }
+
+  /* Family photo co vừa màn hình */
+  .family-photo img {
+    max-height: 60vh;
+  }
+
+  /* Photos container xếp dọc */
+  .photos {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
