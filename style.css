@@ -1,0 +1,334 @@
+/* Reset cơ bản */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  color: #333;
+}
+
+/* ====== PHẦN HERO ====== */
+.wedding-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("img/anh1.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wedding-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+
+.overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.overlay span {
+  font-size: 28px;
+}
+
+.overlay p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* ====== PHẦN SAVE THE DATE ====== */
+.wedding-save {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff; /* có thể thêm bg-pattern nếu muốn */
+}
+
+.wedding-save h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  margin: 0;
+  color: #2e3a59;
+  line-height: 1.5;
+}
+
+.wedding-save .sub-text {
+  font-family: "Brush Script MT", cursive;
+  font-size: 28px;
+  margin: 15px 0 5px;
+  color: #444;
+}
+
+.wedding-save .date {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e3a59;
+  margin-bottom: 20px;
+}
+
+.photo-frame {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-frame img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== CALENDAR ===== */
+.wedding-calendar {
+  background: #2e3a59;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+.month-title {
+  font-family: "Brush Script MT", cursive;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.weekdays span { font-size: 14px; }
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+.days span {
+  padding: 8px;
+  border-radius: 50%;
+}
+.days .highlight {
+  border: 2px solid white;
+  font-weight: bold;
+}
+.invite-text {
+  margin-top: 30px;
+  font-size: 18px;
+  font-style: italic;
+}
+.couple-name {
+  margin-top: 10px;
+  font-size: 26px;
+  font-family: "Times New Roman", serif;
+}
+.couple-name span {
+  font-size: 22px;
+}
+
+/* ===== TIME SECTION ===== */
+.wedding-time {
+  background: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.polaroid {
+  width: 40%;
+  max-width: 180px;
+  border: 10px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: rotate(-3deg);
+}
+.polaroid.right { transform: rotate(3deg); }
+
+.time-info {
+  font-family: "Times New Roman", serif;
+  color: #2e3a59;
+}
+.time-info p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+.time-info .day {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.big-date {
+  font-size: 50px;
+  margin-top: 5px;
+  color: #2e3a59;
+}
+
+/* ===== LOCATION SECTION ===== */
+.wedding-location {
+  background: #fafafa;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.time-place h2 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #2e3a59;
+}
+.time-place span {
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.time-place .day {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #2e3a59;
+}
+
+.date-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: "Times New Roman", serif;
+  margin: 15px 0;
+}
+.date-block .month,
+.date-block .year {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #555;
+}
+.date-block .big-date {
+  font-size: 50px;
+  font-weight: bold;
+  color: #2e3a59;
+}
+
+.note {
+  font-size: 14px;
+  color: #777;
+}
+
+.rings {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.time-place h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #2e3a59;
+}
+.address {
+  font-size: 14px;
+  margin: 5px 0 15px;
+  color: #444;
+}
+
+.btn-map {
+  display: inline-block;
+  background: #2e3a59;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.family-photo {
+  margin-top: 20px;
+}
+.family-photo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== RSVP & COUNTDOWN ===== */
+.wedding-rsvp {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.wedding-rsvp h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2e3a59;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.rsvp-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+}
+.rsvp-form button {
+  background: #2e3a59;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.countdown h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#timer {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e3a59;
+  letter-spacing: 4px;
+}
+
+/* ===== THANK YOU SECTION ===== */
+.wedding-thanks {
+  background: #f0f4f7;
+  text-align: center;
+  padding: 30px 20px;
+}
+.wedding-thanks .thanks-text p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #333;
+}
+.wedding-thanks h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 26px;
+  color: #2e3a59;
+}
+.wedding-thanks img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
