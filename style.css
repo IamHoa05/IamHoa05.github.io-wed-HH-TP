@@ -10,7 +10,7 @@ body {
 .wedding-hero {
   position: relative;
   height: 100vh;
-  background: url("img/anh1.jpg") no-repeat center center/cover; /* ảnh nền */
+  background: url("img/pic6.JPG") no-repeat center center/cover; /* ảnh nền */
   display: flex;
   justify-content: center; /* vẫn căn giữa ngang */
   align-items: flex-end;   /* đẩy nội dung xuống dưới */
@@ -27,7 +27,7 @@ body {
 /* Chữ script */
 .hero-script {
   font-family: "Pinyon Script", "Allura", cursive;
-  font-size: 48px;
+  font-size: 40px;
   color: #fff;
   margin-bottom: 20px;
 }
@@ -35,7 +35,7 @@ body {
 /* Tên cô dâu chú rể */
 .hero-names {
   font-family: "Cormorant Garamond";
-  font-size: 28px;
+  font-size: 20px;
   color: #fff;
   letter-spacing: 2px;
   margin: 5px 0;
@@ -273,38 +273,69 @@ body {
   color: #777;
 }
 /* Chia 2 cột */
-.location-box-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 900px;
+/* --- KHUNG ĐỎ BO TRÒN --- */
+.location-wrappers {
+  background-color: #2e3a59; /* màu đỏ */
+  color: white;
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  width: 90%;
+  max-width: 380px;
   margin: 40px auto;
+  padding: 50px 27px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
 .location-box {
-  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.location-box h3 {
-  font-family: "Playfair Display", serif;
-  margin-bottom: 12px;
-  font-size: 20px;
-  color: #333;
+.location-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.map-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+.location-icon {
+  font-size: 30px;
+  margin-right: 10px;
 }
 
-.map-img:hover {
-  transform: scale(1.03);
+.location-info {
+  flex-grow: 1;
+  font-size: 14px;
 }
 
+.location-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.direction-btn {
+  background-color: white;
+  color: #d50000;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.direction-btn:hover {
+  background-color: #ffe0e0;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #fff;
+  margin: 15px 0;
+}
 .family-photo {
   margin: 0;               /* bỏ margin */
   padding: 0;              /* nếu cần */
@@ -321,6 +352,7 @@ body {
   border-radius: 0;        /* bỏ bo góc nếu muốn full màn hình */
   box-shadow: none;        /* bỏ shadow nếu muốn tràn sạch */
 }
+
 /* === ALBUM ẢNH CƯỚI
 .wedding-album header {
   text-align: center;
