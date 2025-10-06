@@ -34,6 +34,7 @@
     }
   }, 1000);
 </script>
+
 <body>
 <!-- Hero Section -->
 <section class="wedding-hero">
@@ -51,6 +52,27 @@
       <img src="img/pic1.jpg" alt="Couple photo">
     </div>
   </section>
+<!-- KHỐI PHÁT NHẠC -->
+<section class="music-player">
+  <div class="music-container">
+    <div class="album-art">
+      <img id="albumImage" src="img/pic4.JPG" alt="Ảnh cưới">
+    </div>
+    <h3 class="song-title">Lễ đường - KAIDINH</h3>
+
+    <audio id="weddingSong" autoplay>
+      <source src="music/LỄ ĐƯỜNG.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+  </div>
+
+  <!-- Các nút điều khiển -->
+  <div class="player-controls">
+    <div class="icon-btn">⏮</div>
+    <div class="play-btn" id="playBtn"><span>▶</span></div>
+    <div class="icon-btn">⏭</div>
+  </div>
+</section>
 
   <!-- PHẦN LỊCH + LỜI MỜI -->
   <section class="wedding-calendar">
@@ -151,7 +173,7 @@
   <!-- Ảnh chung -->
  
     <div class="family-photo">
-      <img src="img/pic4.JPG" alt="Family Photo">
+      <img src="img/pic7.JPG" alt="Family Photo">
     </div>
 </section>
 
@@ -163,8 +185,8 @@
     <div class="album-item item1"><img src="img/anh3.JPG" alt="Ảnh 1"></div>
     <div class="album-item item2"><img src="img/anh4.JPG" alt="Ảnh 2"></div>
     <div class="album-item item3"><img src="img/pic5.JPG" alt="Ảnh 3"></div>
-    <div class="album-item item4"><img src="img/anh6.JPG" alt="Ảnh 4"></div>
-    <div class="album-item item5"><img src="img/anh7.JPG" alt="Ảnh 5"></div>
+    <div class="album-item item4"><img src="img/pic10.JPG" alt="Ảnh 4"></div>
+    <div class="album-item item5"><img src="img/pic9.JPG" alt="Ảnh 5"></div>
     <div class="album-item item6"><img src="img/anh9.JPG" alt="Ảnh 9"></div>
   </div>
 </section>
@@ -191,3 +213,57 @@
 
 </body>
 </html>
+
+<script>
+  const song = document.getElementById("weddingSong");
+  const playBtn = document.getElementById("playBtn");
+  const albumArt = document.querySelector(".album-art");
+  const playIcon = playBtn.querySelector("span");
+
+  // Khi phát nhạc
+  song.addEventListener("play", () => {
+    albumArt.style.animationPlayState = "running";
+    playIcon.textContent = "❚❚"; // đổi sang pause
+  });
+
+  // Khi dừng nhạc
+  song.addEventListener("pause", () => {
+    albumArt.style.animationPlayState = "paused";
+    playIcon.textContent = "▶"; // đổi sang play
+  });
+
+  // Nút phát/tạm dừng
+  playBtn.addEventListener("click", () => {
+    if (song.paused) {
+      song.play();
+    } else {
+      song.pause();
+    }
+  });
+
+  // Tự động phát (nếu được phép)
+  window.addEventListener("load", () => {
+    song.play().catch(() => {
+      albumArt.style.animationPlayState = "paused";
+      playIcon.textContent = "▶";
+    });
+  });
+
+  // Tự gán trái / phải xen kẽ nếu chưa có
+  const albumItems = document.querySelectorAll('.album-item');
+  albumItems.forEach((item, i) => {
+    if (!item.classList.contains('left') && !item.classList.contains('right')) {
+      item.classList.add(i % 2 === 0 ? 'left' : 'right');
+    }
+  });
+
+  // Hiệu ứng xuất hiện khi cuộn
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.2 });
+
+  albumItems.forEach(item => observer.observe(item));;
+
+</script>
