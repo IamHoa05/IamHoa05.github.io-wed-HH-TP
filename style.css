@@ -349,6 +349,7 @@ body {
   width: 100%;             /* chiếm toàn bộ chiều ngang */
   height: 100%;            /* chiếm toàn bộ chiều cao */
   object-fit: cover;       /* giữ tỉ lệ và cắt ảnh nếu cần */
+  object-position: center 75%; /* dịch vùng focus xuống 65% ảnh (tức là 3/4 giữa)
   border-radius: 0;        /* bỏ bo góc nếu muốn full màn hình */
   box-shadow: none;        /* bỏ shadow nếu muốn tràn sạch */
 }
